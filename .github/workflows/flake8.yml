@@ -1,7 +1,7 @@
 name: flake8
 
 on:
-   # Trigger the workflow on push or pull request,
+   # Trigger the workflow on push or pull request,  --触发的两种情况
    # but only for the master branch
    push:
      branches:
@@ -13,10 +13,10 @@ on:
 jobs:
   flake8:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  #代码运行的设备-版本
 
-    steps:
-    - uses: actions/checkout@v2
+    steps:  #步骤（此处共四步）
+    - uses: actions/checkout@v2  #执行 actions/checkout@版本2.0 --即执行一个action，具体action是checkout
 
     - name: Set up Python 3.10
       uses: actions/setup-python@v1
